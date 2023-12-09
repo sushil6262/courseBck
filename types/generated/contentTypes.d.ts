@@ -368,13 +368,15 @@ export interface ApiCourseCourse extends Schema.CollectionType {
     singularName: 'course';
     pluralName: 'courses';
     displayName: 'course';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    courseName: Attribute.String;
+    courseName: Attribute.String & Attribute.Required;
     courseImage: Attribute.Media;
+    decription: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

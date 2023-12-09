@@ -4,7 +4,8 @@
   "info": {
     "singularName": "course",
     "pluralName": "courses",
-    "displayName": "course"
+    "displayName": "course",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "courseName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "courseImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "decription": {
+      "type": "text",
+      "required": true
     }
   }
 }
